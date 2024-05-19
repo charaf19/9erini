@@ -15,7 +15,7 @@
 To install and run the 9errini application locally, follow these steps:
 
 1. Clone the repository:
-git clone https://github.com/your_username/9errini.git
+git clone https://github.com/charaf19/9errini.git
 
 2. Navigate to the project directory:
 cd 9errini

@@ -71,16 +71,12 @@ if 'messages' not in st.session_state:
 # Display all historical messages
 display_chat_messages()
 
-# Create a fixed-width container for the input section
-input_container = st.container()
-
 # Custom CSS to style the file uploader button
 st.markdown("""
     <style>
     .input-container {
         display: flex;
         align-items: center;
-        max-width: 800px; /* Adjust this width as needed */
     }
     .text-input {
         flex-grow: 1;
@@ -98,16 +94,19 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
+# Create an input container with text input, send button, and file uploader
+st.markdown('<div class="input-container">', unsafe_allow_html=True)
+
 # Text input for the prompt
-with input_container:
-    prompt = st.text_input('', placeholder='Pass your Prompt Here', key='text_input', help='Type your message here and hit enter or click Send')
+prompt = st.text_input('', placeholder='Pass your Prompt Here', key='text_input', help='Type your message here and hit enter or click Send')
 
 # Send button
 send_button = st.button('Send', key='send_button', help='Click to send your message')
 
 # File uploader button
-with input_container:
-    uploaded_file = st.file_uploader("", type=["png", "jpg", "jpeg"], label_visibility="collapsed")
+uploaded_file = st.file_uploader("", type=["png", "jpg", "jpeg"], label_visibility="collapsed")
+
+st.markdown('</div>', unsafe_allow_html=True)
 
 # Handle user input if the send button is clicked or an image is uploaded
 if send_button:

@@ -12,7 +12,7 @@ def query_huggingface_api(prompt):
     API_URL = "https://jrliticly0nlznb9.us-east-1.aws.endpoints.huggingface.cloud"
     headers = {
         "Accept": "application/json",
-        "Authorization":f"Bearer {access_token}",
+        "Authorization":f"Bearer {access_token} ",
         "Content-Type": "application/json"
     }
     response = requests.post(API_URL, headers=headers, json={"inputs": prompt})

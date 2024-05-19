@@ -27,6 +27,13 @@ pip install -r requirements.txt
 4. Run the Streamlit application:
 streamlit run app.py
 
+## Interface Overview
+
+![9errini Interface](interface_screenshot.png)
+
+This screenshot demonstrates the user interface of the 9errini application. Users can interact with the chatbot by typing messages in the input box or uploading images for captioning and text simplification.
+
+
 
 ## Usage
 
